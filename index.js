@@ -12,6 +12,7 @@ bot.on('ready', () => {
 });
 
 
+let memberList = null;
 
 let vote = new VoteMap();
 
@@ -47,5 +48,20 @@ bot.on('message', msg => {
         ![skeld, mirahq, polus, airship] - Sends one vote for specified map. Don't include the [ ] symbols when entering your map selection.\n \
         !results - Display the results of the vote, then reset all counts to zero.\n");
     }
+    /*
+    else if (msg.content === 'memberlist') {
+        memberList = bot.users.fetch();
+        for (mem in memberList) {
+            msg.channel.send(mem);
+        }
+    }
+    */
+
+    /**
+     * TODO: 
+     * - Wrap commands in functions.
+     * - Implement function to detect if user has voted more than once.
+     * - Make array of users that holds a vote count for each user (max 1).  Make a class for AmongUSUser.
+     */
 
 })
