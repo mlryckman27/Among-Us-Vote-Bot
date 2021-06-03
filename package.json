@@ -1,0 +1,13 @@
+{
+  "name": "bot-test-zero",
+  "version": "0.0.0",
+  "description": "BotTestZero",
+  "main": "index.js",
+  "author": {
+    "name": "Matt"
+  },
+  "dependencies": {
+    "discord.js": "^11.6.4",
+    "dotenv": "^8.2.0"
+  }
+}
