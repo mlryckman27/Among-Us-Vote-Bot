@@ -37,7 +37,7 @@ bot.on('message', msg => {
         vote.incAirship();
     }
     else if (msg.content ==='!randmap' && vote.getVoteStatus === true) {
-        let randSelection = randNum(3);
+        let randSelection = randNum(4);
 
         switch (randSelection) {
             case 0:
