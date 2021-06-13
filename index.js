@@ -72,22 +72,6 @@ bot.on('message', msg => {
         !randmap - vote for a random map.\n \
         !results - Display the results of the vote, then reset all counts to zero.\n");
     }
-    /*
-    else if (msg.content === 'memberlist') {
-        memberList = bot.users.fetch();
-        for (mem in memberList) {
-            msg.channel.send(mem);
-        }
-    }
-    */
-
-    /**
-     * TODO: 
-     * - Wrap commands in functions.
-     * - Implement function to detect if user has voted more than once.
-     * - Make array of users that holds a vote count for each user (max 1).  Make a class for AmongUSUser.
-     */
-
 });
 
 function randNum(max) {
