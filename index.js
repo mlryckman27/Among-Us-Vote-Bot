@@ -36,6 +36,31 @@ bot.on('message', msg => {
         msg.channel.send(`${msg.author.tag} voted for Airship.`);
         vote.incAirship();
     }
+    else if (msg.content ==='!randmap' && vote.getVoteStatus === true) {
+        let randSelection;
+        randomSelection = Math.floor(Math.random() * 3);
+
+        switch (randSelection) {
+            case 0:
+                msg.channel.send(`${msg.author.tag} voted for Skeld.`);
+                vote.incSkeld();
+                break;
+            case 1:
+                msg.channel.send(`${msg.author.tag} voted for MiraHQ.`);
+                vote.incMirahq();
+                break;
+            case 2:
+                msg.channel.send(`${msg.author.tag} voted for Polus.`);
+                vote.incPolus();
+                break;
+            case 3:
+                msg.channel.send(`${msg.author.tag} voted for Airship.`);
+                vote.incAirship();
+                break;
+            default:
+                break;
+        }
+    }
     else if (msg.content === '!results' && vote.getVoteStatus === true) {
         let finalCount = vote.results();
         msg.channel.send(finalCount);
