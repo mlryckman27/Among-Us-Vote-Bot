@@ -37,8 +37,7 @@ bot.on('message', msg => {
         vote.incAirship();
     }
     else if (msg.content ==='!randmap' && vote.getVoteStatus === true) {
-        let randSelection;
-        randomSelection = Math.floor(Math.random() * 3);
+        let randSelection = randNum(3);
 
         switch (randSelection) {
             case 0:
@@ -70,6 +69,7 @@ bot.on('message', msg => {
         !help - Displays this help message.\n \
         !startvote - Starts a new round of voting.\n \
         ![skeld, mirahq, polus, airship] - Sends one vote for specified map. Don't include the [ ] symbols when entering your map selection.\n \
+        !randmap - vote for a random map.\n \
         !results - Display the results of the vote, then reset all counts to zero.\n");
     }
     /*
@@ -88,4 +88,9 @@ bot.on('message', msg => {
      * - Make array of users that holds a vote count for each user (max 1).  Make a class for AmongUSUser.
      */
 
-})
+});
+
+function randNum(max) {
+    return Math.floor(Math.random() * max);
+}
+
